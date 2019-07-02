@@ -1,0 +1,44 @@
+git config --global user.name "username"
+git config --global user.email "useremail"
+
+git status
+git log --all --oneline --decorate --graph
+
+git branch "New branch Name"
+git branch // Check branches
+git branch --merged // check already merged branch
+git checkout branchName // Switch branch
+
+
+## In order to merge, switch to master first ##
+git checkout master
+git diff master..branchName // Show Differences
+git merge branchName // Fast-forward way
+git branch -d branchName // Delete merged branch
+git branch -D branchName // Force Delete branch
+
+
+#### Solving Conflict ####
+HEAD => master
+branchName => branchName
+
+-git status
+-remove the lines that don't need manually
+-git add fileName(the conflict file)
+-git commit(and exit)
+-git status
+
+
+### Detached HEAD ###
+### create a new branch in that commit id ###
+(switch to the previous committing id)
+git checkout 49a33afb
+git branch branchName
+git checkout branchName
+
+### Stash (temporary saving our commit)
+git stash
+git stash list(List all stashes)
+git stash list -p(Changes in diferent stashes)
+git stash apply(return to able to commit)
+git stash pop(remove stash)
