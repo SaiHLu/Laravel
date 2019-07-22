@@ -1,0 +1,15 @@
+docker --version
+
+docker ps -a // -a -> all available
+
+docker pull image-name
+
+docker images // list all images
+
+docker run -it -d image-name // -d->run in background
+
+docker stop id
+
+docker start id
+
+docker exec -it id bash // get inside to the running system's bash 
