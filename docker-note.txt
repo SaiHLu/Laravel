@@ -6,10 +6,29 @@ docker pull image-name
 
 docker images // list all images
 
-docker run -it -d image-name // -d->run in background
+docker run -it -d image-name // -d->run in 
+
+background
 
 docker stop id
 
 docker start id
 
-docker exec -it id bash // get inside to the running system's bash 
+docker kill id
+
+docker rm id // remove container
+
+docker rmi image-id // remove image
+
+docker exec -it id bash // get inside to the 
+
+running system's bash 
+
+
+
+
+
+#### Saving Changes to container ######
+docker commit container-id new-image-new
+
+docker rm -f $(docker ps -a -q) // $() => pipe
